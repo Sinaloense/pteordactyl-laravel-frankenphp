@@ -1,0 +1,32 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2025-12-15T23:15:24-07:00",
+    "name": "FrankenPHP",
+    "author": "sinaloensemel@gmail.com",
+    "description": "FrankenPHP egg",
+    "features": null,
+    "docker_images": {
+        "PHP 8.5": "ghcr.io\/sinaloense\/pterodactyl-frankenphp:8.5",
+        "PHP 8.4": "ghcr.io\/sinaloense\/frankenphp:8.4"
+    },
+    "file_denylist": [],
+    "startup": "php artisan octane:frankenphp --host=0.0.0.0 --port={{SERVER_PORT}} --caddyfile=\".\/caddy\/Caddyfile\"",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"Server running\"\r\n}",
+        "logs": "{}",
+        "stop": "^C & ^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\/bin\/bash\r\n# FrankenPHP Installation Script\r\n#\r\n\r\n# Create Caddy directory\r\nmkdir -p \/mnt\/server\/caddy\r\n\r\n# Create PHP conf.d directory\r\nmkdir -p \/mnt\/server\/php\/conf.d\r\n\r\n# Create PHP logs directory\r\nmkdir -p \/mnt\/server\/php\/logs\r\n\r\n\r\n\r\n# 99-custom.ini\r\ncat > \/mnt\/server\/php\/conf.d\/99-custom.ini << 'EOF'\r\n; Maximum amount of memory a script may consume\r\n; https:\/\/php.net\/memory-limit\r\nmemory_limit = 128M\r\n\r\n; Maximum size of POST data that PHP will accept.\r\n; Its value may be 0 to disable the limit. It is ignored if POST data reading\r\n; is disabled through enable_post_data_reading.\r\n; http:\/\/php.net\/post-max-size\r\npost_max_size = 105M\r\n\r\n; Maximum allowed size for uploaded files.\r\n; http:\/\/php.net\/upload-max-filesize\r\nupload_max_filesize = 100M\r\n\r\n\r\n\r\n; This directive allows you to disable certain functions.\r\n; It receives a comma-delimited list of function names.\r\n; https:\/\/php.net\/disable-functions\r\ndisable_functions = \"propro\"\r\n\r\n; Log errors to specified file. PHP's default behavior is to leave this value\r\n; empty.\r\n; https:\/\/php.net\/error-log\r\n; Example:\r\nerror_log = \"\/home\/container\/php\/logs\/php_errors.log\"\r\n;display_errors = Off\r\nlog_errors = On\r\nEOF\r\n\r\n# php-info.php\r\ncat > \/mnt\/server\/html\/php-info.php << 'EOF'\r\n<?php\r\nphpinfo();\r\nEOF",
+            "container": "debian@sha256:b4aa902587c2e61ce789849cb54c332b0400fe27b1ee33af4669e1f7e7c3e22f",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": []
+}
