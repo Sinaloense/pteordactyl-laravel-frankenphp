@@ -9,6 +9,7 @@ if [ -f composer.json ]; then
     echo "Executing Octane installation..."
     php artisan octane:install --server=frankenphp
 
+    php artisan storage:link
     php artisan optimize
 fi
 
