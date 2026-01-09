@@ -1,5 +1,4 @@
-FROM dunglas/frankenphp@sha256:05ada5ce613fba6a98cbc9b23d2d36d461cb1219795edd6ef11fc7b5fa150984
-#FROM dunglas/frankenphp:php8.5-bookworm
+FROM dunglas/frankenphp:php8.5-bookworm
 
 LABEL maintainer="Manuel Martinez <sina@serverscstrike.com>"
 
