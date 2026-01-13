@@ -38,4 +38,4 @@ This repository provides what is needed to run FrankenPHP as part of a Pterodact
 
 ## Recommended to be used together with
 
-- [Pterodactyl Cloudflared.](https://github.com/Sinal)
+- [Pterodactyl Cloudflared.](https://github.com/Sinaloense/pterodactyl-cloudflared)
