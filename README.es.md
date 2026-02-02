@@ -5,9 +5,9 @@ Este repositorio provee lo necesario para correr FrankenPHP como parte de un ser
 
 ## Contenido del repositorio:
 
-- Dockerfile — Imagen con FrankenPHP y scripts necesarios.
-- entrypoint.sh — Script de arranque.
-- egg-franken-p-h-p.json — Egg para usar en Pterodactyl.
+- `Dockerfile` — Imagen con FrankenPHP y scripts necesarios.
+- `entrypoint.sh` — Script de arranque.
+- `egg-franken-p-h-p.json` — Egg para usar en Pterodactyl.
 
 ## TODO:
 - logrotate.d — Configuración de rotación de logs.
@@ -17,9 +17,9 @@ Este repositorio provee lo necesario para correr FrankenPHP como parte de un ser
 - Integración de FrankenPHP directamente desde un servidor administrado por Pterodactyl.
 - Instalaciones Composer automaticas al momento de iniciar tu servidor.
 - trusted_proxies integrado.
-- Versión de FrankenPHP: 1.11.1.
-- Versión de Caddy: 2.10.2.
-- Versiónes de PHP: 8.3.29, 8.4.16, 8.5.1.
+- Versión de FrankenPHP: `1.11.1`.
+- Versión de Caddy: `2.10.2`.
+- Versiónes de PHP: `8.3.30, 8.4.17, 8.5.2`.
 
 ## Requisitos:
 
@@ -27,9 +27,9 @@ Este repositorio provee lo necesario para correr FrankenPHP como parte de un ser
 
 ## Instalación:
 
-- Carga egg-nginx--p-h-p--f-p-m.json en tu panel.
-- Subir archivo [pterodactyl-nginx](https://github.com/Sinaloense/pterodactyl-nginx/blob/main/logrotate.d/pterodactyl-nginx) en el directorio /etc/logrotate.d/ de tu host principal.
-- Subir archivo [pterodactyl-phpfpm](https://github.com/Sinaloense/pterodactyl-phpfpm/blob/main/logrotate.d/pterodactyl-phpfpm) en el directorio /etc/logrotate.d/ de tu host principal.
+- Carga `egg-nginx--p-h-p--f-p-m.json` en tu panel.
+- Subir archivo [pterodactyl-nginx](https://github.com/Sinaloense/pterodactyl-nginx/blob/main/logrotate.d/pterodactyl-nginx) en el directorio `/etc/logrotate.d/` de tu host principal.
+- Subir archivo [pterodactyl-phpfpm](https://github.com/Sinaloense/pterodactyl-phpfpm/blob/main/logrotate.d/pterodactyl-phpfpm) en el directorio `/etc/logrotate.d/` de tu host principal.
 
 ## Recomendado usarse en conjunto con:
 - [Pterodactyl Cloudflared.](https://github.com/Sinaloense/pterodactyl-cloudflared)
