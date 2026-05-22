@@ -1,4 +1,6 @@
-FROM dunglas/frankenphp:php8.5-bookworm
+ARG PHP_VERSION=8.5
+
+FROM dunglas/frankenphp:php${PHP_VERSION}-trixie
 
 LABEL maintainer="Manuel Martinez <sina@serverscstrike.com>"
 
