@@ -45,7 +45,7 @@ jobs:
 
             [ -z "$tag" ] && continue
 
-            TAG_ARGS="$TAG_ARGS -t ghcr.io/sinaloense/pterodactyl-nginx-phpfpm:$tag"
+            TAG_ARGS="$TAG_ARGS -t ghcr.io/sinaloense/pterodactyl-frankenphp:$tag"
           done <<< "${{ matrix.tags }}"
 
           docker build \
@@ -64,5 +64,5 @@ jobs:
 
             [ -z "$tag" ] && continue
 
-            docker push ghcr.io/sinaloense/pterodactyl-nginx-phpfpm:$tag
+            docker push ghcr.io/sinaloense/pterodactyl-frankenphp:$tag
           done <<< "${{ matrix.tags }}"
