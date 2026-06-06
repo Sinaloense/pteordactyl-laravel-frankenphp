@@ -20,7 +20,7 @@ This repository provides what is needed to run FrankenPHP as part of a Pterodact
 - Integrated `trusted_proxies`.
 - FrankenPHP version: `1.12.3`.
 - Caddy version: `2.11.3`.
-- Supported PHP versions: `8.5.6, 8.4.21, 8.3.31`.
+- PHP versions: `8.5.7, 8.4.22, 8.3.31`.
 
 ## Requirements
 
