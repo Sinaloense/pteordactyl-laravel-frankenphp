@@ -19,7 +19,7 @@ Este repositorio provee lo necesario para correr FrankenPHP como parte de un ser
 - trusted_proxies integrado.
 - Versión de FrankenPHP: `1.12.6`.
 - Versión de Caddy: `2.11.4`.
-- Versiónes de PHP: `8.5.9, 8.4.24, 8.3.33`.
+- Versiónes de PHP: `8.5.10, 8.4.25, 8.3.33`.
 
 ## Requisitos:
 
